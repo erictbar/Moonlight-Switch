@@ -219,9 +219,12 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
         mbed::tls
         mbed::x509
         mbed::crypto
-        ${AVCODEC_LIBRARY}
-        ${AVUTIL_LIBRARY}
-        ${AVFORMAT_LIBRARY}
+        /usr/local/Cellar/ffmpeg/6.1-with-options_3/include/libavutil
+        /usr/local/Cellar/ffmpeg/6.1-with-options_3/include/libavcodec
+        /usr/local/Cellar/ffmpeg/6.1-with-options_3/include/libavformat
+        #${AVCODEC_LIBRARY}
+        #${AVUTIL_LIBRARY}
+        #${AVFORMAT_LIBRARY}
         ${SWRESAMPLE_LIBRARY}
         opus
         SDL2::SDL2
