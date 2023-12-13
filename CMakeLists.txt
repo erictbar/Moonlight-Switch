@@ -208,6 +208,7 @@ find_package(EXPAT REQUIRED)
 ##message("avutil: ${AVUTIL_LIBRARY}")
 find_path(SWRESAMPLE_INCLUDE_DIR  /usr/local/Cellar/ffmpeg/6.1-with-options_3/include/libavcodec)
 find_library(SWRESAMPLE_LIBRARY /usr/local/Cellar/ffmpeg/6.1-with-options_3/include/libavcodec/libavcodec.dylib)
+target_include_directories(${PROJECT_NAME} PRIVATE ${SWRESAMPLE_INCLUDE_DIR}) 
 message("swresample: ${SWRESAMPLE_LIBRARY}")
 
 find_path(AVCODEC_INCLUDE_DIR  /usr/local/Cellar/ffmpeg/6.1-with-options_3/include/libavcodec)
@@ -219,8 +220,8 @@ find_library(AVFORMAT_LIBRARY  /usr/local/Cellar/ffmpeg/6.1-with-options_3/inclu
 find_path(AVUTIL_INCLUDE_DIR /usr/local/Cellar/ffmpeg/6.1-with-options_3/include/libavutil)
 find_library(AVUTIL_LIBRARY    /usr/local/Cellar/ffmpeg/6.1-with-options_3/include/libavutil/avutil.h)
 
-find_path(AVDEVICE_INCLUDE_DIR /usr/local/Cellar/ffmpeg/6.1-with-options_3/include/libavdevice)
-find_library(AVDEVICE_LIBRARY  /usr/local/Cellar/ffmpeg/6.1-with-options_3/include/libavdevice/avdevice.h)
+##find_path(AVDEVICE_INCLUDE_DIR /usr/local/Cellar/ffmpeg/6.1-with-options_3/include/libavdevice)
+##find_library(AVDEVICE_LIBRARY  /usr/local/Cellar/ffmpeg/6.1-with-options_3/include/libavdevice/avdevice.h)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
         borealis
@@ -234,7 +235,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
         ${AVUTIL_LIBRARY}
         ${AVCODEC_LIBRARY}
         ${AVFORMAT_LIBRARY}
-        #${SWRESAMPLE_LIBRARY}
+        ${SWRESAMPLE_LIBRARY}
         opus
         SDL2::SDL2
         PNG::PNG
