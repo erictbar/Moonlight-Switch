@@ -206,8 +206,8 @@ find_package(EXPAT REQUIRED)
 
 ##find_library(AVUTIL_LIBRARY avutil)
 ##message("avutil: ${AVUTIL_LIBRARY}")
-find_path(SWRESAMPLE_INCLUDE_DIR  /usr/local/Cellar/ffmpeg/6.1-with-options_3/include/libavcodec)
-find_library(SWRESAMPLE_LIBRARY /usr/local/Cellar/ffmpeg/6.1-with-options_3/include/libavcodec/libavcodec.dylib)
+find_path(SWRESAMPLE_INCLUDE_DIR  /usr/local/Cellar/ffmpeg/6.1-with-options_3/include)
+find_library(SWRESAMPLE_LIBRARY /usr/local/Cellar/ffmpeg/6.1-with-options_3/include/libavcodec.dylib)
 target_include_directories(${PROJECT_NAME} PRIVATE ${SWRESAMPLE_INCLUDE_DIR}) 
 message("swresample: ${SWRESAMPLE_LIBRARY}")
 
