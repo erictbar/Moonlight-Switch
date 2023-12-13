@@ -225,7 +225,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
         #${AVCODEC_LIBRARY}
         #${AVUTIL_LIBRARY}
         #${AVFORMAT_LIBRARY}
-        ${SWRESAMPLE_LIBRARY}
+        #${SWRESAMPLE_LIBRARY}
         opus
         SDL2::SDL2
         PNG::PNG
