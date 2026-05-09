@@ -18,7 +18,7 @@ SOURCES		:=	$(SOURCES) \
 				$(BOREALIS_PATH)/library/lib/extern/nxfmtwrapper \
 				$(BOREALIS_PATH)/library/lib/extern/yoga/yoga/event \
 				$(BOREALIS_PATH)/library/lib/extern/yoga/yoga \
-				$(BOREALIS_PATH)/library/lib/extern/tinyxml2/ \
+				$(BOREALIS_PATH)/library/lib/extern/tinyxml2 \
 				$(addprefix $(BOREALIS_PATH)/library/lib/extern/switch-libpulsar/, $(PLSR_SOURCES))
 
 INCLUDES	:=	$(INCLUDES) \
