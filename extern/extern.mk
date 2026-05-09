@@ -1,7 +1,12 @@
 mkfile_path	:=	$(abspath $(lastword $(MAKEFILE_LIST)))
 
 BOREALIS_PATH :=	$(EXTERN_PATH)/borealis
+
+ifeq ($(wildcard $(TOPDIR)/$(BOREALIS_PATH)/library/borealis.mk),)
+include $(TOPDIR)/$(EXTERN_PATH)/borealis_compat.mk
+else
 include $(TOPDIR)/$(BOREALIS_PATH)/library/borealis.mk
+endif
 
 SOURCES		:=	$(SOURCES) \
 				$(EXTERN_PATH)/moonlight-common-c/src \

@@ -14,3 +14,5 @@ builddir
 *.xcuserstate
 moonlight-nx
 build.mac/Moonlight.app
+libromfs-generator
+build_libromfs_generator
